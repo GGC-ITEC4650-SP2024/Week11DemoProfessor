@@ -35,10 +35,16 @@ public class PlayerController : MonoBehaviour
             Ray r = cam.ScreenPointToRay(Input.touches[0].position);
             if(Physics.Raycast(r, out hitInfo)) {
                 Vector3 h = hitInfo.point;
+                h.y = 1;
+
+                //move towards touch
+                //Vector3 dir = hitInfo.point - transform.position;
+                //transform.position += dir.normalized * Time.deltaTime;
+                
                 //if(hitInfo.collider.name == "Alien 1") {
                     //kill Alien1
                 //}
-                h.y = 1;
+                
                 transform.LookAt(h); 
             }
 
