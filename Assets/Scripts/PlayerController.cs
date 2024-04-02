@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour
                 //move towards touch
                 //Vector3 dir = hitInfo.point - transform.position;
                 //transform.position += dir.normalized * Time.deltaTime;
+                //myBod.addForce(...); or myBod.velocity = ...
+                
                 
                 //if(hitInfo.collider.name == "Alien 1") {
                     //kill Alien1
