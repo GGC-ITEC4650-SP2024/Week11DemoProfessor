@@ -25,9 +25,10 @@ public class Breakable : MonoBehaviour
         
     }
 
-    void hideMe() {
+    public void hideMe() {
         myCol.enabled = false;
         myRend.material = transParentMat;
+        Invoke("showMe", hideTime);
     }
 
     void showMe() {
@@ -37,8 +38,7 @@ public class Breakable : MonoBehaviour
 
     void OnCollisionEnter(Collision c) {
         if(c.gameObject.tag == "Bullet") {
-            hideMe();
-            Invoke("showMe", hideTime);
+            //hideMe();
         }
     }
 }
